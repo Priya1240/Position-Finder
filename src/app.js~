@@ -1,0 +1,51 @@
+// Include the Main React Dependencies
+import React from "react"
+import ReactDOM from "react-dom"
+import { render  } from 'react-dom';
+//duh, browser router
+import {Link, Route, BrowserRouter as Router} from 'react-router-dom';
+
+//import { BrowserRouter  } from 'react-router-dom'
+//import { BrowserRouter, Match, Miss  } from 'react-router';
+import { Match, Miss  } from 'react-router';
+// Include the main Parent Component
+import Main from "./components/Main"
+//Include the AppSate file
+import AppState from "./AppState";
+//import myRoutes from "./components/children/myRoutes";
+// This code here allows us to render our main component (in this case Parent)
+// import Login from "./components/children/Login";
+// import Home from "./components/children/Home";
+// import Matches from "./components/children/Matches";
+// import Users from "./components/children/Users";
+// import Register from "./components/children/Register";
+// import Results from "./components/children/Results";
+
+
+
+
+const Root = () => {
+  return (
+
+<Router>
+<div>
+
+
+  <AppState> 
+
+    <Main>
+
+      </Main>  
+    
+  </AppState>
+
+</div>
+</Router>
+
+
+  )
+}
+
+render(<Root/>, document.querySelector('#app'));
+
+
